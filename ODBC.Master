@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ODBC.master.cs" Inherits="ODBC_Public.ODBC" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Open Door Brewing Company</title>
+    
+    <script src="JAVASCRIPT/jquery/jquery-1.7.2.min.js"></script>
+    <script src="JAVASCRIPT/jquery/jquery.cookie.js"></script>
+    <script src="JAVASCRIPT/jquery/jquery.simplemodal.1.4.4.min.js"></script>
+    <script src="JAVASCRIPT/AgeCheck.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-49709679-1', 'opendoorbrewco.com');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+
+    </script>
+
+    <link href="CSS/ODBC_Master_Styles.css" rel="stylesheet" />
+    <link rel="icon" href="CSS/favicons/favicon_beer_amber.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="CSS/favicons/favicon_beer_amber.ico" type="image/x-icon"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <nav class="topNav center">
+                <a href="default.aspx"><img id="doorLogo" alt="Home" title="Home" src="CSS/icons/door_logo.png" /></a>
+                <div id="headerLinks">
+                    <a href="AboutUs.aspx"  title="About Us" class="moveUp">ABOUT</a>
+                </div>
+        </nav>
+    </header>
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <footer class="masterFooter">
+        <nav class="content center">
+              <table class="tableFixed">
+                <tr>
+                    <td class="tdHalf footerLeft">
+                        <a href="https://www.facebook.com/opendoorbrewco" title="Facebook" target="_blank">
+                            <div class="fbFooter rotateSubtle"></div>
+                        </a>
+                        <a href="https://twitter.com/OpenDoorBrewCo" title="Twitter" target="_blank">
+                            <div class="twitterFooter rotateSubtle"></div>
+                        </a>
+                    </td>
+                    <td class="tdHalf footerRight">
+                        <a href="ContactUs.aspx" title="Contact Us" class="moveUp">
+                            <h2>Contact Us</h2>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </nav>
+    </footer>
+</body>
+</html>
